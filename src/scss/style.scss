@@ -2,3 +2,20 @@
 
 @import "colors.scss";
 @import "typography.scss";
+
+@import "parts/sidebar.scss";
+@import "parts/chatlist.scss";
+@import "parts/chat.scss";
+
+:root {
+    font-family: 'Poppins';
+}
+.container {
+    display: grid;
+    grid-template-areas: 
+  "nav header header"
+  "nav chatlist chat";
+    grid-template-rows: 80px 1fr;
+    grid-template-columns: 150px 380px 1fr;
+    grid-gap: 0;
+}
