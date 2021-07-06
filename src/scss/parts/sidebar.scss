@@ -1,5 +1,26 @@
 .sidebar {
     grid-area: nav;
+
+    color: white;
+    background: $accent;
     overflow-y: scroll;
-background: $accent;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;  
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    &:nth-child(2) {
+        margin-top: 112px;
+    }
+}
+.sidebar__item {
+    height: 150px;
+}
+.logo {
+    position: fixed;
+    top: 0px;
+}
+.logo__container {
+    display: flex;
+    margin: 33px 52px;
 }

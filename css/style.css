@@ -83,8 +83,35 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: nav;
-  overflow-y: scroll;
+  color: white;
   background: #3A63DE;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar:nth-child(2) {
+  margin-top: 112px;
+}
+
+.sidebar__item {
+  height: 150px;
+}
+
+.logo {
+  position: fixed;
+  top: 0px;
+}
+
+.logo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 33px 52px;
 }
 
 .chatlist {
