@@ -1,7 +1,3 @@
 .chatlist {
   grid-area: chatlist;
 }
-
-.search {
-  grid-area: header;
-}

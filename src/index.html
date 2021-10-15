@@ -71,18 +71,44 @@
             </div>
             <div class="sidebar__scrolling">
                 <button class="scroll">
-                    <img src="img/sidebar/scroll.png" alt="go to up" >
+                    <img src="img/sidebar/scroll.png" alt="go to up">
                 </button>
             </div>
         </div>
         <div class="search">
-            Search...
+            <i class="search__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.75 9C3.75 6.1005 6.1005 3.75 9 3.75C11.8995 3.75 14.25 6.1005 14.25 9C14.25 11.8995 11.8995 14.25 9 14.25C6.1005 14.25 3.75 11.8995 3.75 9ZM9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75C10.5938 15.75 12.0585 15.1976 13.2133 14.2739L16.7192 17.7799C17.0121 18.0728 17.487 18.0728 17.7799 17.7799C18.0728 17.487 18.0728 17.0121 17.7799 16.7192L14.2739 13.2133C15.1976 12.0585 15.75 10.5938 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25Z"
+                        fill="#333333" />
+                </svg>
+            </i>
+            <input type="text" id="search" name="search" aria-label="Search" placeholder="Search..."
+                class="search__input">
         </div>
         <div class="chatlist">
             <div class="chatlist-group"></div>
         </div>
         <div class="chat-header">
-            Jane Wilson
+            <div class="chat-header__title">
+                <div class="chat-header__avatar">
+                    <img src="img/users/user3.svg" alt="Jane Wilson">
+                </div>
+                <div class="chat-header__name">Jane Wilson</div>
+            </div>
+            <i class="chat-header__icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M11 5C11 4.44772 10.5523 4 10 4C9.44772 4 9 4.44772 9 5V9H5C4.44772 9 4 9.44772 4 10C4 10.5523 4.44772 11 5 11H9V15C9 15.5523 9.44772 16 10 16C10.5523 16 11 15.5523 11 15V11H15C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9H11V5Z" />
+                </svg>
+
+            </i>
+            <i class="chat-header__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.5 10C5.5 10.8284 4.82843 11.5 4 11.5C3.17157 11.5 2.5 10.8284 2.5 10C2.5 9.17157 3.17157 8.5 4 8.5C4.82843 8.5 5.5 9.17157 5.5 10ZM11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10ZM16 11.5C16.8284 11.5 17.5 10.8284 17.5 10C17.5 9.17157 16.8284 8.5 16 8.5C15.1716 8.5 14.5 9.17157 14.5 10C14.5 10.8284 15.1716 11.5 16 11.5Z" />
+                </svg>
+            </i>
         </div>
         <div class="chat">
 

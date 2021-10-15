@@ -1,0 +1,28 @@
+.chat-header {
+  grid-area: topbar;
+  padding: 14px 28px;
+  border-bottom: #E1E3E5 solid 1px;
+}
+
+.chat-header__title {
+  background-color: papayawhip;
+}
+
+.chat-header__avatar {
+  width: 52px;
+  height: 52px;
+  margin-right: 16px;
+  border-radius: 12px;
+}
+
+.chat-header__name {
+  color: #333333;
+}
+
+.chat-header__icon {
+  cursor: pointer;
+}
+
+.chat-header__icon path {
+  fill: #818386;
+}

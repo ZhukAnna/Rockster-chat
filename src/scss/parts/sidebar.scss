@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "../colors.scss";
 .sidebar {
     grid-area: nav;
 }
@@ -44,5 +44,4 @@
 }
 .scroll {
     background: none;
-   // transform: rotate(180deg);
 }

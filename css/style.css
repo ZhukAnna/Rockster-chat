@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: 15px;
 }
 
 .sidebar {
@@ -135,15 +136,22 @@ body {
 
 .sidebar__scrolling {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   bottom: 0px;
   background: #3A63DE;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 55px;
 }
 
 .scroll {
   background: none;
-  -webkit-transform: rotate(180);
-          transform: rotate(180);
-  margin: 0 auto;
 }
 
 .logo {
@@ -160,17 +168,73 @@ body {
   z-index: 55;
 }
 
+.search {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: search;
+  position: relative;
+  padding: 22px;
+  border-bottom: #E1E3E5 solid 1px;
+  border-right: #E1E3E5 solid 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.search__input {
+  width: 100%;
+  margin: 0;
+  padding-left: 24px;
+  color: #818386;
+  font-size: 15px;
+  line-height: 1;
+  font-family: inherit;
+  border: none;
+}
+
 .chatlist {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: chatlist;
 }
 
-.search {
+.chat-header {
   -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: header;
+  -ms-grid-column: 3;
+  grid-area: topbar;
+  padding: 14px 28px;
+  border-bottom: #E1E3E5 solid 1px;
+}
+
+.chat-header__title {
+  background-color: papayawhip;
+}
+
+.chat-header__avatar {
+  width: 52px;
+  height: 52px;
+  margin-right: 16px;
+  border-radius: 12px;
+}
+
+.chat-header__name {
+  color: #333333;
+}
+
+.chat-header__icon path {
+  fill: #818386;
 }
 
 .chat {
@@ -179,17 +243,10 @@ body {
   grid-area: chat;
 }
 
-.chat-header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: header;
-}
-
 .container {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "nav header header" "nav chatlist chat";
+      grid-template-areas: "nav search topbar" "nav chatlist chat";
   -ms-grid-rows: 80px 1fr;
       grid-template-rows: 80px 1fr;
   -ms-grid-columns: 150px 380px 1fr;

@@ -1,0 +1,32 @@
+@import "../colors.scss";
+.search {
+    grid-area: search;
+    position: relative;
+    padding: 22px;
+    border-bottom: $border solid 1px;
+    border-right: $border solid 1px;
+    display: flex;
+}
+.search__icon {
+    position: absolute;
+    top: 50%;
+    margin-top:-10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.search__input {
+    width: 100%;
+    margin: 0;
+    padding-left: 24px;
+    color: $greylight;
+    font-size: 15px;
+    line-height: 1;
+    font-family: inherit;
+    border: none;
+}

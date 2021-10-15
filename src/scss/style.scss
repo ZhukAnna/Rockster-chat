@@ -5,13 +5,15 @@
 
 @import "parts/sidebar.scss";
 @import "parts/logo.scss";
+@import "parts/search.scss";
 @import "parts/chatlist.scss";
+@import "parts/chat-header.scss";
 @import "parts/chat.scss";
 
 .container {
     display: grid;
     grid-template-areas: 
-  "nav header header"
+  "nav search topbar"
   "nav chatlist chat";
     grid-template-rows: 80px 1fr;
     grid-template-columns: 150px 380px 1fr;

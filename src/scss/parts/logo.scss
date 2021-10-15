@@ -1,3 +1,4 @@
+@import "../colors.scss";
 .logo {
     display: flex;
     margin: 33px 52px;
@@ -8,5 +9,4 @@
     top: 0px;
     background: $accent;
     z-index: 55;
-  //  margin-bottom: 112px;
 }
