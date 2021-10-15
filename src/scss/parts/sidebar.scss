@@ -1,26 +1,48 @@
+@import "colors.scss";
 .sidebar {
     grid-area: nav;
-
-    color: white;
-    background: $accent;
-    overflow-y: scroll;
-    -ms-overflow-style: none; 
-    scrollbar-width: none;  
-    &::-webkit-scrollbar {
-        display: none;
-    }
-    &:nth-child(2) {
-        margin-top: 112px;
-    }
+}
+.sidebar--scrollable {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 .sidebar__item {
-    height: 150px;
+   height: 150px;
+   background: $accent;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
-.logo {
+.sidebar__item :nth-child(1){
+    margin-top: 112px;
+}
+.sidebar__item a {
+    color: white;
+    font-size: 13px;
+    text-align: center;
+}
+.sidebar__item span {
+    display: block;
+    margin-top: 16px;
+    opacity: .8;
+}
+.sidebar__icon {
+    display: block;
+    margin: 0 auto;
+    opacity: .7;
+}
+.sidebar__scrolling {
     position: fixed;
-    top: 0px;
-}
-.logo__container {
     display: flex;
-    margin: 33px 52px;
+    bottom: 0px;
+    background: $accent;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 55px;
+}
+.scroll {
+    background: none;
+   // transform: rotate(180deg);
 }
