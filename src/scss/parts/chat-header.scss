@@ -3,21 +3,33 @@
     grid-area: topbar;
     padding: 14px 28px;
     border-bottom: $border solid 1px;
+    display: flex;
+    justify-content: space-between;
 }
 .chat-header__title {
-background-color: papayawhip;
+    display: flex;
+    align-items: center;
 }
 .chat-header__avatar {
     width: 52px;
     height: 52px;
     margin-right: 16px;
+    margin-left: 1px;
     border-radius: 12px;
 }
 .chat-header__name {
     color: $heading;
 }
+.chat-header__icon-container {
+    display: flex;
+    align-items: center;
+}
 .chat-header__icon {
     cursor: pointer;
+    margin-right: 28px;
+}
+.chat-header__icon :nth-last-child(-n+1) {
+    margin: 0;
 }
 .chat-header__icon path{
     fill:#818386;
