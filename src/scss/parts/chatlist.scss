@@ -1,4 +1,6 @@
+@import "../colors.scss";
 .chatlist {
     grid-area: chatlist;
+    border-right: $border solid 1px;
 }
 

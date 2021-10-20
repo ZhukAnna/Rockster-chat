@@ -23,13 +23,13 @@
 .chat-header__icon-container {
     display: flex;
     align-items: center;
+    :nth-last-child(-n+1) {
+    margin: 0;
+}
 }
 .chat-header__icon {
     cursor: pointer;
     margin-right: 28px;
-}
-.chat-header__icon :nth-last-child(-n+1) {
-    margin: 0;
 }
 .chat-header__icon path{
     fill:#818386;
