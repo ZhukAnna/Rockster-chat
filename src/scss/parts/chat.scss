@@ -11,22 +11,26 @@
     flex: auto;
     border-bottom: $border solid 1px;
     height: 0;
+    padding: 20px 30px;
     overflow-y: auto;
 }
+
 .chat-input {
     display: flex;
     flex: 0 0 76px;
     align-items: center;
     padding: 10px;
-}
-.chat-input__icon {
+
+    &__icon-container {
+    display: flex;
+    }    
+    
+    &__icon {
     margin-left: 16px;
-    cursor: pointer;
-    :nth-child(1) {
-        margin-left: 28px;
+    cursor: pointer;  
     }
-}
-.chat-input__input {
+
+    &__input {
     width: 100%;
     color: $greylight;
     font-size: 15px;
@@ -34,11 +38,13 @@
     font-family: inherit;
     border: none;
     padding: 0 22px;
-}
-.chat-input__button {
+    }
+
+    &__button {
     width: 56px;
     height: 56px;
     flex: 0 0 56px;
     background: $accent;
     padding: 15px;
+    }
 }

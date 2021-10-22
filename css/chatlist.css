@@ -2,3 +2,106 @@
   grid-area: chatlist;
   border-right: #E1E3E5 solid 1px;
 }
+
+.chatlist__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 18px 2px 24px;
+}
+
+.chatlist__header {
+  color: #818386;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.chatlist__add-icon {
+  width: 22px;
+  height: 22px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.chatlist__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px;
+  border-bottom: #E1E3E5 solid 1px;
+}
+
+.chatlist__item--unread {
+  min-width: 21px;
+  height: 21px;
+  background: #FD726A;
+  padding: 4px 5px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.contact__avatar {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  margin-right: 16px;
+  border-radius: 12px;
+  background: #D7F5F6;
+  float: left;
+}
+
+.contact__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact__name {
+  color: #333333;
+  margin-bottom: 6px;
+}
+
+.contact__preview {
+  color: #818386;
+  font-size: 14px;
+}
+
+.contact--online::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  display: block;
+  width: 14px;
+  height: 14px;
+  background: #44CB7F;
+  border-radius: 50%;
+  border: 3px solid #FFFFFF;
+}

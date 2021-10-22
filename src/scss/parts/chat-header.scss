@@ -5,32 +5,39 @@
     border-bottom: $border solid 1px;
     display: flex;
     justify-content: space-between;
-}
-.chat-header__title {
+
+    &__title {
     display: flex;
     align-items: center;
-}
-.chat-header__avatar {
+    cursor: pointer;
+    }
+
+    &__avatar {
     width: 52px;
     height: 52px;
     margin-right: 16px;
     margin-left: 1px;
     border-radius: 12px;
-}
-.chat-header__name {
+    }
+
+    &__name {
     color: $heading;
-}
-.chat-header__icon-container {
+    }
+
+    &__icon-container {
     display: flex;
     align-items: center;
     :nth-last-child(-n+1) {
     margin: 0;
-}
-}
-.chat-header__icon {
+    }
+    }
+
+    &__icon {
     cursor: pointer;
     margin-right: 28px;
-}
-.chat-header__icon path{
+    }
+    
+    &__icon path{
     fill:#818386;
+    }
 }
