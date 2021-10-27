@@ -48,3 +48,44 @@
     padding: 15px;
     }
 }
+
+.response {
+    display: flex;
+    margin-bottom: 22px;
+    align-items: center;
+
+    &__avatar {
+        align-self: flex-end; 
+    }
+
+    &__message {
+        min-height: 59px;       
+        padding: 18px 24px 18px 20px;
+        line-height: 21px;
+        min-width: 60%;
+    }
+
+    &__message--left {
+        background: $accent;
+        color: $base-color;
+        border-radius: 8px 8px 8px 1px; 
+        margin-left: 8px;
+        margin-right: 17px;
+    }
+
+    &__message--right {
+        background: $grey100;
+        color: $greydark;
+        border-radius: 8px 8px 1px 8px; 
+        margin-right: 8px;
+        margin-left: 17px;
+    }
+
+    &__menu {
+        align-self: center;
+    }
+
+    &--right {
+        flex-direction: row-reverse;
+    }
+}
