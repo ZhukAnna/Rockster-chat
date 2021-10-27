@@ -21,6 +21,7 @@
 }
 
 .chat-header__avatar {
+  position: relative;
   width: 52px;
   height: 52px;
   margin-right: 16px;
