@@ -53,12 +53,14 @@
     display: flex;
     margin-bottom: 22px;
     align-items: center;
+    border-bottom: 24px solid rgba(255, 255, 255, 0);
 
     &__avatar {
         align-self: flex-end;
     }
 
     &__message {
+        position: relative;
         min-height: 59px;       
         padding: 18px 24px 18px 20px;
         line-height: 21px;
@@ -68,14 +70,30 @@
         &--left {
             background: $accent;
             color: $base-color;
-            border-radius: 8px 8px 8px 1px;          
+            border-radius: 8px 8px 8px 1px;
+            & > :nth-last-child(1) {
+                right: 0;
+            }       
         }
         &--right {
             background: $grey100;
             color: $greydark;
             border-radius: 8px 8px 1px 8px; 
+            & > :nth-last-child(-n+1) {
+                left: 0;
+            }  
         }
 
+    }
+
+    &__time {
+        position: absolute;
+        margin-top: 4px;
+        color: $greylight;
+        line-height: 20px;
+        font-size: 13px;
+        bottom: -24px;
+        z-index: 5;
     }
 
     &__menu {

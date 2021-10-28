@@ -79,6 +79,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 24px solid rgba(255, 255, 255, 0);
 }
 
 .response__avatar {
@@ -87,6 +88,7 @@
 }
 
 .response__message {
+  position: relative;
   min-height: 59px;
   padding: 18px 24px 18px 20px;
   line-height: 21px;
@@ -100,10 +102,28 @@
   border-radius: 8px 8px 8px 1px;
 }
 
+.response__message--left > :nth-last-child(1) {
+  right: 0;
+}
+
 .response__message--right {
   background: #F2F5FA;
   color: #595F69;
   border-radius: 8px 8px 1px 8px;
+}
+
+.response__message--right > :nth-last-child(-n+1) {
+  left: 0;
+}
+
+.response__time {
+  position: absolute;
+  margin-top: 4px;
+  color: #818386;
+  line-height: 20px;
+  font-size: 13px;
+  bottom: -24px;
+  z-index: 5;
 }
 
 .response__menu {
