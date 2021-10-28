@@ -55,34 +55,41 @@
     align-items: center;
 
     &__avatar {
-        align-self: flex-end; 
+        align-self: flex-end;
     }
 
     &__message {
         min-height: 59px;       
         padding: 18px 24px 18px 20px;
         line-height: 21px;
-        min-width: 60%;
-    }
+        max-width: 60%;
+        margin: 0 8px;
+        
+        &--left {
+            background: $accent;
+            color: $base-color;
+            border-radius: 8px 8px 8px 1px;          
+        }
+        &--right {
+            background: $grey100;
+            color: $greydark;
+            border-radius: 8px 8px 1px 8px; 
+        }
 
-    &__message--left {
-        background: $accent;
-        color: $base-color;
-        border-radius: 8px 8px 8px 1px; 
-        margin-left: 8px;
-        margin-right: 17px;
-    }
-
-    &__message--right {
-        background: $grey100;
-        color: $greydark;
-        border-radius: 8px 8px 1px 8px; 
-        margin-right: 8px;
-        margin-left: 17px;
     }
 
     &__menu {
         align-self: center;
+        display: flex;
+    }
+
+    &__icon-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $base-color;
+        flex: 0 0 auto;
+        padding: 7px;
     }
 
     &--right {
