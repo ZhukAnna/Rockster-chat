@@ -1,42 +1,436 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rockster</title>
-  <link rel="stylesheet" href="css/style.min.css" />
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Rockster</title>
+    <link rel="stylesheet" href="css/style.min.css">
+<script defer="defer" src="main.bundle.js"></script></head>
 
 <body>
 
-  <div class="container">
-    <div class="sidebar">
-      <div class="sidebar__item" id="logo"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item"></div>
-      <div class="sidebar__item" id="scrolling"></div>
-    </div>
-    <div class="chatlist">
-      <div class="search">
+    <div class="container">
 
-      </div>
-    </div>
-    <div class="chat">
+        <div class="sidebar">
+            <div class="logo__container">
+                <a href="#" class="logo">
+                    <img src="img/Logo.png" alt="rockster">
+            </a></div>
+            <div class="sidebar--scrollable">
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/dashboard.png" alt="Dashboard">
+                        <span>Dashboard</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/cart.png" alt="">
+                        <span>E-Commerce</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/calendar.png" alt="">
+                        <span>Calendar</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/mail.png" alt="">
+                        <span>Mail</span></a>
+                </div>
+                <div class="sidebar__item sidebar__item--active">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/chat.png" alt="">
+                        <span>Chat</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/tasks.png" alt="">
+                        <span>Tasks</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/project.png" alt="">
+                        <span>Projects</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/folder.png" alt="">
+                        <span>File Manager</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/text.png" alt="">
+                        <span>Notes</span></a>
+                </div>
+                <div class="sidebar__item">
+                    <a href="#">
+                        <img class="sidebar__icon" src="img/sidebar/contacts.png" alt="">
+                        <span>Contacts</span></a>
+                </div>
+            </div>
+            <div class="sidebar__scrolling">
+                <button class="scroll">
+                    <img src="img/sidebar/scroll.png" alt="go to up">
+                </button>
+            </div>
+        </div>
+
+        <div class="search">
+            <i class="search__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.75 9C3.75 6.1005 6.1005 3.75 9 3.75C11.8995 3.75 14.25 6.1005 14.25 9C14.25 11.8995 11.8995 14.25 9 14.25C6.1005 14.25 3.75 11.8995 3.75 9ZM9 2.25C5.27208 2.25 2.25 5.27208 2.25 9C2.25 12.7279 5.27208 15.75 9 15.75C10.5938 15.75 12.0585 15.1976 13.2133 14.2739L16.7192 17.7799C17.0121 18.0728 17.487 18.0728 17.7799 17.7799C18.0728 17.487 18.0728 17.0121 17.7799 16.7192L14.2739 13.2133C15.1976 12.0585 15.75 10.5938 15.75 9C15.75 5.27208 12.7279 2.25 9 2.25Z" fill="#333333"/>
+                </svg>
+            </i>
+            <input type="text" id="search" name="search" aria-label="Search" placeholder="Search..." class="search__input">
+        </div>
+
+        <div class="chatlist">
+            <div class="chatlist--scrollable">
+                <div class="chatlist__group">
+                    <div class="chatlist__header">Teams</div>
+                    <button class="chatlist__add-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5C11 4.44772 10.5523 4 10 4C9.44772 4 9 4.44772 9 5V9H5C4.44772 9 4 9.44772 4 10C4 10.5523 4.44772 11 5 11H9V15C9 15.5523 9.44772 16 10 16C10.5523 16 11 15.5523 11 15V11H15C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9H11V5Z" fill="#818386"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar">
+                            <div class="contact__avatar--letter">M</div>
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                #Managers
+                            </div>
+                            <div class="contact__preview">
+                                Hello, Mark! I am writing to in...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online" style="background-color: #FFE9DD;">
+                            <div class="contact__avatar--letter" style="color: #FF9054;">D</div>
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                #Designers
+                            </div>
+                            <div class="contact__preview">
+                                We use the Arts as a means...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatlist__item--unread">18</div>
+                </div>
+
+                <div class="chatlist__group">
+                    <div class="chatlist__header">People</div>
+                    <button class="chatlist__add-icon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5C11 4.44772 10.5523 4 10 4C9.44772 4 9 4.44772 9 5V9H5C4.44772 9 4 9.44772 4 10C4 10.5523 4.44772 11 5 11H9V15C9 15.5523 9.44772 16 10 16C10.5523 16 11 15.5523 11 15V11H15C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9H11V5Z" fill="#818386"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online">
+                            <img src="img/users/user1.svg" alt="Dustin Williamson">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Dustin Williamson
+                            </div>
+                            <div class="contact__preview">
+                                Hello, Mark! I am writing to in...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online">
+                            <img src="img/users/user3.svg" alt="Jane Wilson">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Jane Wilson
+                            </div>
+                            <div class="contact__preview">
+                                It looks amazing.
+                                The customer will be very satisfied.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online">
+                            <img src="img/users/user2.svg" alt="Regina Cooper">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Regina Cooper
+                            </div>
+                            <div class="contact__preview">
+                                The Arts play a large role in...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatlist__item--unread">4</div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online">
+                            <img src="img/users/user4.svg" alt="Brandon Pena">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Brandon Pena
+                            </div>
+                            <div class="contact__preview">
+                                The arts allow us to be as sp...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar">
+                            <img src="img/users/user5.svg" alt="Jacob Hawkins">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Jacob Hawkins
+                            </div>
+                            <div class="contact__preview">
+                                From dance and music to a...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online">
+                            <img src="img/users/user6.svg" alt="Shane Black">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Shane Black
+                            </div>
+                            <div class="contact__preview">
+                                The arts teach us how to co...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online">
+                            <img src="img/users/user2.svg" alt="Priscilla Edwards">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Priscilla Edwards
+                            </div>
+                            <div class="contact__preview">
+                                Concept of life is shown thro...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chatlist__item">
+                    <div class="contact">
+                        <div class="contact__avatar contact--online"><img src="img/users/user3.svg" alt="Kristin Mccoy">
+                        </div>
+                        <div class="contact__content">
+                            <div class="contact__name">
+                                Kristin Mccoy
+                            </div>
+                            <div class="contact__preview">
+                                Inner thoughts and beauty i...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chat-header">
+            <div class="chat-header__title">
+                <div class="chat-header__avatar contact--online">
+                    <img src="img/users/user3.svg" alt="Jane Wilson">
+                </div>
+                <div class="chat-header__name">Jane Wilson</div>
+            </div>
+            <div class="chat-header__icon-container">
+                <i class="chat-header__icon">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5C11 4.44772 10.5523 4 10 4C9.44772 4 9 4.44772 9 5V9H5C4.44772 9 4 9.44772 4 10C4 10.5523 4.44772 11 5 11H9V15C9 15.5523 9.44772 16 10 16C10.5523 16 11 15.5523 11 15V11H15C15.5523 11 16 10.5523 16 10C16 9.44772 15.5523 9 15 9H11V5Z"/>
+                    </svg>
+
+                </i>
+                <i class="chat-header__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10C5.5 10.8284 4.82843 11.5 4 11.5C3.17157 11.5 2.5 10.8284 2.5 10C2.5 9.17157 3.17157 8.5 4 8.5C4.82843 8.5 5.5 9.17157 5.5 10ZM11.5 10C11.5 10.8284 10.8284 11.5 10 11.5C9.17157 11.5 8.5 10.8284 8.5 10C8.5 9.17157 9.17157 8.5 10 8.5C10.8284 8.5 11.5 9.17157 11.5 10ZM16 11.5C16.8284 11.5 17.5 10.8284 17.5 10C17.5 9.17157 16.8284 8.5 16 8.5C15.1716 8.5 14.5 9.17157 14.5 10C14.5 10.8284 15.1716 11.5 16 11.5Z"/>
+                    </svg>
+                </i>
+            </div>
+        </div>
+
+        <div class="chat">
+
+            <div class="chat-window">
+
+                <div class="response">
+                    <div class="response__avatar"><img src="img/users/user3.svg" alt="Jane Wilson"></div>
+                    <div class="response__message response__message--left">
+                        <p>Hi Cody, any progress on the project?
+                            <img src="img/icons/e-happy.svg" alt="">
+                        </p>
+                        <div class="response__time">1 day ago</div>
+                    </div>
+                    <div class="response__menu">
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.05 11.0001C6.05 11.9114 5.31127 12.6501 4.4 12.6501C3.48873 12.6501 2.75 11.9114 2.75 11.0001C2.75 10.0888 3.48873 9.3501 4.4 9.3501C5.31127 9.3501 6.05 10.0888 6.05 11.0001ZM12.65 11.0001C12.65 11.9114 11.9113 12.6501 11 12.6501C10.0887 12.6501 9.35 11.9114 9.35 11.0001C9.35 10.0888 10.0887 9.3501 11 9.3501C11.9113 9.3501 12.65 10.0888 12.65 11.0001ZM17.6 12.6501C18.5113 12.6501 19.25 11.9114 19.25 11.0001C19.25 10.0888 18.5113 9.3501 17.6 9.3501C16.6887 9.3501 15.95 10.0888 15.95 11.0001C15.95 11.9114 16.6887 12.6501 17.6 12.6501Z" fill="#818386"/>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+
+                <div class="response response--right">
+                    <div class="response__avatar"><img src="img/users/user6.svg" alt="Jane Wilson"></div>
+                    <div class="response__message response__message--right">
+                        <p>Hi Jane!<br>
+                            Yes. I just finished developing the "Chat" template.</p>
+                        <div class="response__time">1 day ago</div>
+                    </div>
+                    <div class="response__menu">
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.05 11.0001C6.05 11.9114 5.31127 12.6501 4.4 12.6501C3.48873 12.6501 2.75 11.9114 2.75 11.0001C2.75 10.0888 3.48873 9.3501 4.4 9.3501C5.31127 9.3501 6.05 10.0888 6.05 11.0001ZM12.65 11.0001C12.65 11.9114 11.9113 12.6501 11 12.6501C10.0887 12.6501 9.35 11.9114 9.35 11.0001C9.35 10.0888 10.0887 9.3501 11 9.3501C11.9113 9.3501 12.65 10.0888 12.65 11.0001ZM17.6 12.6501C18.5113 12.6501 19.25 11.9114 19.25 11.0001C19.25 10.0888 18.5113 9.3501 17.6 9.3501C16.6887 9.3501 15.95 10.0888 15.95 11.0001C15.95 11.9114 16.6887 12.6501 17.6 12.6501Z" fill="#818386"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="response__attachments-container response--right">
+                    <div class="response__attachment response__attachment--more">+3</div>
+                    <div class="response__attachment"><img src="img/media/attachment3.png" alt=""></div>
+                    <div class="response__attachment"><img src="img/media/attachment2.png" alt=""></div>
+                    <div class="response__attachment"><img src="img/media/attachment1.png" alt=""></div>
+                </div>
+
+                <div class="response">
+                    <div class="response__avatar"><img src="img/users/user3.svg" alt="Jane Wilson"></div>
+                    <div class="response__message response__message--left">
+                        <p>It looks amazing. <img src="img/icons/e-nerd.svg" alt=""><br>
+                            The customer will be very satisfied.</p>
+                        <div class="response__time">1 day ago</div>
+                    </div>
+                    <div class="response__menu">
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.05 11.0001C6.05 11.9114 5.31127 12.6501 4.4 12.6501C3.48873 12.6501 2.75 11.9114 2.75 11.0001C2.75 10.0888 3.48873 9.3501 4.4 9.3501C5.31127 9.3501 6.05 10.0888 6.05 11.0001ZM12.65 11.0001C12.65 11.9114 11.9113 12.6501 11 12.6501C10.0887 12.6501 9.35 11.9114 9.35 11.0001C9.35 10.0888 10.0887 9.3501 11 9.3501C11.9113 9.3501 12.65 10.0888 12.65 11.0001ZM17.6 12.6501C18.5113 12.6501 19.25 11.9114 19.25 11.0001C19.25 10.0888 18.5113 9.3501 17.6 9.3501C16.6887 9.3501 15.95 10.0888 15.95 11.0001C15.95 11.9114 16.6887 12.6501 17.6 12.6501Z" fill="#818386"/>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+
+                <div class="response response--right">
+                    <div class="response__avatar"><img src="img/users/user6.svg" alt="Jane Wilson"></div>
+                    <div class="response__message response__message--right">
+                        <p>Thank you, glad you liked it.<br>
+                            Send me Styles Guide.</p>
+                        <div class="response__time">1 day ago</div>
+                    </div>
+                    <div class="response__menu">
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.699 3.85019C16.5086 3.85019 16.32 3.8877 16.1441 3.96058C15.9681 4.03346 15.8083 4.14028 15.6736 4.27494L14.3832 5.56534L16.4341 7.61622L17.7245 6.32582C17.8591 6.19115 17.966 6.03129 18.0388 5.85534C18.1117 5.6794 18.1492 5.49082 18.1492 5.30038C18.1492 5.10994 18.1117 4.92136 18.0388 4.74542C17.966 4.56947 17.8591 4.40961 17.7245 4.27494C17.5898 4.14028 17.4299 4.03346 17.254 3.96058C17.078 3.8877 16.8895 3.85019 16.699 3.85019ZM15.2673 8.78294L13.2165 6.73207L4.96912 14.9794L4.20004 17.7994L7.01999 17.0303L15.2673 8.78294ZM15.5126 2.43618C15.8888 2.28038 16.2919 2.2002 16.699 2.2002C17.1062 2.2002 17.5093 2.28038 17.8854 2.43618C18.2616 2.59198 18.6033 2.82034 18.8912 3.10822C19.1791 3.3961 19.4074 3.73786 19.5632 4.11399C19.719 4.49012 19.7992 4.89326 19.7992 5.30038C19.7992 5.7075 19.719 6.11064 19.5632 6.48677C19.4074 6.8629 19.1791 7.20466 18.8912 7.49254L8.0318 18.3519C7.93028 18.4535 7.80402 18.5267 7.66551 18.5645L3.24131 19.7711C2.95568 19.849 2.65022 19.7679 2.44087 19.5585C2.23153 19.3492 2.15041 19.0437 2.22831 18.7581L3.43491 14.3339C3.47268 14.1954 3.54595 14.0691 3.64747 13.9676L14.5069 3.10822C14.7947 2.82034 15.1365 2.59198 15.5126 2.43618Z" fill="#818386"/>
+                            </svg>
+                        </button>
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.85521 4.07572C8.99961 3.93132 9.19547 3.8502 9.39968 3.8502H12.5897C12.7939 3.8502 12.9898 3.93132 13.1342 4.07572C13.2786 4.22013 13.3597 4.41598 13.3597 4.6202V5.3902L8.62968 5.39019V4.6202C8.62968 4.41598 8.71081 4.22013 8.85521 4.07572ZM6.97968 5.39019V4.6202C6.97968 3.97837 7.23465 3.36283 7.68849 2.909C8.14232 2.45516 8.75786 2.2002 9.39968 2.2002H12.5897C13.2315 2.2002 13.847 2.45516 14.3009 2.909C14.7547 3.36283 15.0097 3.97837 15.0097 4.6202V5.3902L18.1722 5.39019C18.6278 5.39019 18.9972 5.75955 18.9972 6.21519C18.9972 6.67082 18.6278 7.04019 18.1722 7.04019H17.4022V17.3802C17.4022 18.022 17.1472 18.6376 16.6934 19.0914C16.2395 19.5452 15.624 19.8002 14.9822 19.8002H7.00718C6.36536 19.8002 5.74982 19.5452 5.29599 19.0914C4.84215 18.6376 4.58718 18.022 4.58718 17.3802V7.04019H3.81719C3.36155 7.04019 2.99219 6.67082 2.99219 6.21519C2.99219 5.75955 3.36155 5.39019 3.81719 5.39019H6.97968ZM6.23718 17.3802V7.04019H15.7522V17.3802C15.7522 17.5844 15.6711 17.7803 15.5267 17.9247C15.3823 18.0691 15.1864 18.1502 14.9822 18.1502H7.00718C6.80297 18.1502 6.60712 18.0691 6.46271 17.9247C6.31831 17.7803 6.23718 17.5844 6.23718 17.3802ZM9.3997 9.37772C9.85534 9.37772 10.2247 9.74709 10.2247 10.2027V14.9877C10.2247 15.4434 9.85534 15.8127 9.3997 15.8127C8.94407 15.8127 8.5747 15.4434 8.5747 14.9877V10.2027C8.5747 9.74709 8.94407 9.37772 9.3997 9.37772ZM13.4147 10.2027C13.4147 9.74709 13.0453 9.37772 12.5897 9.37772C12.134 9.37772 11.7647 9.74709 11.7647 10.2027V14.9877C11.7647 15.4434 12.134 15.8127 12.5897 15.8127C13.0453 15.8127 13.4147 15.4434 13.4147 14.9877V10.2027Z" fill="#818386"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="divider">
+                    <span>Today</span>
+                </div>
+
+                <div class="response">
+                    <div class="response__avatar"><img src="img/users/user3.svg" alt="Jane Wilson"></div>
+                    <div class="response__file response__message--left">
+                        <p class="response__file-name">Brand Styles Guide.pdf</p>
+                        <p class="response__file-size">487 KB</p>
+                        <button class="response__download">Download
+                            <i class="download"><img src="img/icons/download.svg" alt="download"></i>
+                        </button>
+                        <div class="response__time">2 min ago</div>
+                    </div>
+                    <div class="response__menu">
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.05 11.0001C6.05 11.9114 5.31127 12.6501 4.4 12.6501C3.48873 12.6501 2.75 11.9114 2.75 11.0001C2.75 10.0888 3.48873 9.3501 4.4 9.3501C5.31127 9.3501 6.05 10.0888 6.05 11.0001ZM12.65 11.0001C12.65 11.9114 11.9113 12.6501 11 12.6501C10.0887 12.6501 9.35 11.9114 9.35 11.0001C9.35 10.0888 10.0887 9.3501 11 9.3501C11.9113 9.3501 12.65 10.0888 12.65 11.0001ZM17.6 12.6501C18.5113 12.6501 19.25 11.9114 19.25 11.0001C19.25 10.0888 18.5113 9.3501 17.6 9.3501C16.6887 9.3501 15.95 10.0888 15.95 11.0001C15.95 11.9114 16.6887 12.6501 17.6 12.6501Z" fill="#818386"/>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+
+                <div class="response response--right">
+                    <div class="response__avatar"><img src="img/users/user6.svg" alt="Jane Wilson"></div>
+                    <div class="response__message response__message--right">
+                        <p>I'll see later</p>
+                        <div class="response__time">1 min ago</div>
+                    </div>
+                    <div class="response__menu">
+                        <button class="response__icon-button">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.05 11.0001C6.05 11.9114 5.31127 12.6501 4.4 12.6501C3.48873 12.6501 2.75 11.9114 2.75 11.0001C2.75 10.0888 3.48873 9.3501 4.4 9.3501C5.31127 9.3501 6.05 10.0888 6.05 11.0001ZM12.65 11.0001C12.65 11.9114 11.9113 12.6501 11 12.6501C10.0887 12.6501 9.35 11.9114 9.35 11.0001C9.35 10.0888 10.0887 9.3501 11 9.3501C11.9113 9.3501 12.65 10.0888 12.65 11.0001ZM17.6 12.6501C18.5113 12.6501 19.25 11.9114 19.25 11.0001C19.25 10.0888 18.5113 9.3501 17.6 9.3501C16.6887 9.3501 15.95 10.0888 15.95 11.0001C15.95 11.9114 16.6887 12.6501 17.6 12.6501Z" fill="#818386"/>
+                            </svg>
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input">
+                <div class="chat-input__icon-container">
+                    <i class="chat-input__icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1323 3.70877C13.5136 3.70877 12.9193 3.9574 12.4804 4.40144L5.38877 11.5764C4.66014 12.3136 4.25 13.3144 4.25 14.3589C4.25 15.4034 4.66014 16.4042 5.38877 17.1413C6.11725 17.8784 7.10432 18.2916 8.1326 18.2916C9.16088 18.2916 10.148 17.8784 10.8764 17.1413L17.9681 9.96637C18.2601 9.67093 18.735 9.6695 19.0287 9.96318C19.3225 10.2569 19.3239 10.7345 19.0319 11.0299L11.9403 18.2049C10.9312 19.2258 9.56161 19.8002 8.1326 19.8002C6.70359 19.8002 5.33403 19.2258 4.32494 18.2049C3.31601 17.1841 2.75 15.8006 2.75 14.3589C2.75 12.9172 3.31601 11.5337 4.32494 10.5129L11.4166 3.33792C12.1361 2.60997 13.1129 2.2002 14.1323 2.2002C15.1518 2.2002 16.1286 2.60997 16.8481 3.33792C17.5674 4.06571 17.9707 5.05185 17.9707 6.07916C17.9707 7.10648 17.5674 8.09262 16.8481 8.82041L9.74871 15.9954C9.74862 15.9955 9.74881 15.9953 9.74871 15.9954C9.31884 16.4302 8.73466 16.6755 8.12488 16.6755C7.51497 16.6755 6.93095 16.4303 6.50106 15.9954C6.07131 15.5606 5.83068 14.9718 5.83068 14.3589C5.83068 13.7459 6.07131 13.1572 6.50106 12.7224L13.0529 6.10141C13.345 5.80614 13.8199 5.80499 14.1135 6.09885C14.4071 6.39271 14.4082 6.87029 14.1161 7.16557L7.56488 13.7859C7.41544 13.9371 7.33068 14.1431 7.33068 14.3589C7.33068 14.5746 7.41544 14.7807 7.56488 14.9319C7.71418 15.0829 7.9157 15.1669 8.12488 15.1669C8.33406 15.1669 8.53559 15.0829 8.68488 14.9319L15.7843 7.75689C16.2233 7.3127 16.4707 6.70929 16.4707 6.07916C16.4707 5.44904 16.2233 4.84564 15.7843 4.40144C15.3454 3.9574 14.7511 3.70877 14.1323 3.70877Z" fill="#818386"/>
+                        </svg>
+                    </i>
+                    <i class="chat-input__icon">
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9992 2.2002C6.13906 2.2002 2.19922 6.14003 2.19922 11.0002C2.19922 15.8603 6.13906 19.8002 10.9992 19.8002C15.8585 19.8002 19.7992 15.8603 19.7992 10.9993C19.7992 6.14003 15.8585 2.2002 10.9992 2.2002ZM10.9992 17.9659C7.15197 17.9659 4.03256 14.8474 4.03256 10.9993C4.03256 7.15111 7.15106 4.03353 10.9992 4.03353C14.8465 4.03353 17.9668 7.15203 17.9668 11.0002C17.9668 14.8483 14.8465 17.9659 10.9992 17.9659ZM10.0826 9.16686C10.0826 10.0533 9.46747 10.771 8.70847 10.771C7.94856 10.771 7.33256 10.0533 7.33256 9.16686C7.33256 8.28045 7.94856 7.5627 8.70756 7.5627C9.46656 7.5627 10.0826 8.28045 10.0826 9.16686ZM13.2908 10.771C14.0508 10.771 14.6658 10.0533 14.6658 9.16686C14.6658 8.28045 14.0498 7.5627 13.2908 7.5627C12.5319 7.5627 11.9159 8.28136 11.9159 9.16686C11.9159 10.0524 12.5319 10.771 13.2908 10.771ZM14.0545 12.5182C14.2313 12.1854 14.6457 12.0544 14.9785 12.2249C15.314 12.3972 15.4496 12.8033 15.281 13.1397C15.2361 13.2304 14.1397 15.3534 11.0001 15.3534C7.86147 15.3534 6.76331 13.2313 6.71747 13.1406C6.54788 12.8005 6.68538 12.388 7.02456 12.2175C7.36556 12.0479 7.77256 12.1845 7.94488 12.5191C7.98338 12.5915 8.75338 13.9784 11.0001 13.9784C13.2578 13.9784 14.0233 12.5787 14.0545 12.5182Z" fill="#818386"/>
+                        </svg>
+                    </i>
+                </div>
+                <input type="text" id="message" name="message" aria-label="Message" placeholder="Type a message here..." class="chat-input__input">
+                <button class="chat-input__button">
+                    <i>
+                        <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.6203 2.75751L3.84001 9.69592C3.13306 9.9882 2.65983 10.6438 2.60491 11.4068C2.55004 12.1699 2.92457 12.8865 3.58237 13.277L8.39156 15.975C9.12762 15.2389 14.8071 11.1926 14.8071 11.1926C14.8071 11.1926 10.7608 16.8721 10.0248 17.6082L12.7227 22.4173C13.1132 23.0751 13.8298 23.4497 14.5929 23.3948C15.3574 23.3397 16.012 22.8653 16.3038 22.1597L23.2422 5.37943C23.5581 4.61543 23.3912 3.77769 22.8066 3.1931C22.222 2.60851 21.3843 2.44154 20.6203 2.75751Z" fill="white"/>
+                        </svg>
+                    </i>
+                </button>
+            </div>
+
+        </div>
 
     </div>
-  </div>
-
-  <script src="bundle.js"></script>
 </body>
 
 </html>
