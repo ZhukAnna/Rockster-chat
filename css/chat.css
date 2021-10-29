@@ -151,6 +151,31 @@
   padding: 7px;
 }
 
+.response__attachments-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -32px -8px 22px;
+  padding: 0 60px;
+}
+
+.response__attachment {
+  margin: 0 8px;
+}
+
+.response__attachment--more {
+  min-width: 48px;
+  height: 48px;
+  background: rgba(58, 99, 222, 0.1);
+  color: #3A63DE;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: center;
+}
+
 .response--right {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;

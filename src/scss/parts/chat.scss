@@ -110,6 +110,27 @@
         padding: 7px;
     }
 
+    &__attachments-container {
+        display: flex;
+        align-items: center;
+        margin: -32px -8px 22px;
+        padding: 0 60px;
+    }
+
+    &__attachment {
+        margin: 0 8px;
+    }
+
+    &__attachment--more {
+        min-width: 48px;
+        height: 48px;
+        background: rgba(58, 99, 222, 0.1);
+        color: $accent;
+        font-weight: 500;
+        line-height: 48px;
+        text-align: center;
+    }
+
     &--right {
         flex-direction: row-reverse;
     }
