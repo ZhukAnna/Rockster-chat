@@ -124,14 +124,54 @@
     &__attachment--more {
         min-width: 48px;
         height: 48px;
-        background: rgba(58, 99, 222, 0.1);
+        background-color: rgba(58, 99, 222, 0.1);
         color: $accent;
         font-weight: 500;
         line-height: 48px;
         text-align: center;
     }
 
+    &__file {
+        position: relative;
+        background-color: rgba(58, 99, 222, 0.08);
+        line-height: 21px;
+        min-width: 258px;
+        max-width: 60%;
+        margin: 0 8px;
+    }
+
+    &__file-name {
+        color: $heading;
+        padding: 18px 20px 4px;
+    }
+
+    &__file-size {
+        color: $accent;
+        padding: 4px 20px 18px;
+    }
+
+    &__download {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 44px;
+        width: 100%;
+        background-color: $accent;
+        color: #fff;
+        font-size: 15px;
+        text-align: left;
+        font-size: 15px;
+        padding: 12px 20px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
     &--right {
         flex-direction: row-reverse;
     }
+}
+
+.download {
+    float: right;
 }

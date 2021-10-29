@@ -604,11 +604,53 @@ body {
 .response__attachment--more {
   min-width: 48px;
   height: 48px;
-  background: rgba(58, 99, 222, 0.1);
+  background-color: rgba(58, 99, 222, 0.1);
   color: #3A63DE;
   font-weight: 500;
   line-height: 48px;
   text-align: center;
+}
+
+.response__file {
+  position: relative;
+  background-color: rgba(58, 99, 222, 0.08);
+  line-height: 21px;
+  min-width: 258px;
+  max-width: 60%;
+  margin: 0 8px;
+}
+
+.response__file-name {
+  color: #333333;
+  padding: 18px 20px 4px;
+}
+
+.response__file-size {
+  color: #3A63DE;
+  padding: 4px 20px 18px;
+}
+
+.response__download {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 44px;
+  width: 100%;
+  background-color: #3A63DE;
+  color: #fff;
+  font-size: 15px;
+  text-align: left;
+  font-size: 15px;
+  padding: 12px 20px;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 .response--right {
@@ -616,6 +658,10 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.download {
+  float: right;
 }
 
 .divider {
