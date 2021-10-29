@@ -4,4 +4,4 @@
 
 ![Rockster Chat](screenshots/Chat-Private.png "Rockster Chat Private")
 
-Посмотреть результат: https://zhukanna.github.io/rockster
+Посмотреть результат: https://zhukanna.github.io/Rockster-chat/
